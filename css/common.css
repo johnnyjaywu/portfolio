@@ -1,0 +1,130 @@
+/* ==================================================================================================== */
+/* STATES
+/* ==================================================================================================== */
+.disabled {
+    cursor: not-allowed;
+}
+
+/* ==================================================================================================== */
+/* TEXT
+/* ==================================================================================================== */
+.uppercase {
+    text-transform: uppercase;
+}
+
+.small {
+    font-size: 0.7em;
+}
+
+/* ==================================================================================================== */
+/* FLEX
+/* ==================================================================================================== */
+.flex {
+    display: flex;
+}
+
+.flex.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex.sb {
+    justify-content: space-between;
+}
+
+.flex.se {
+    justify-content: space-evenly;
+}
+
+.flex.vertical {
+    flex-direction: column;
+}
+
+/* ==================================================================================================== */
+/* BUTTONS
+/* ==================================================================================================== */
+button {
+    border-radius: 0.5em;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: contrast(0.5);
+}
+
+button:active {
+    filter: contrast(0.8);
+}
+
+button.regular {
+    background: var(--color-forth);
+    border: solid 2px currentColor;
+    color: var(--color-main);
+}
+
+button.bold {
+    background: var(--color-forth);
+    border: solid 4px currentColor;
+    color: var(--color-main);
+    font-weight: bold;
+}
+
+button.solid {
+    background: var(--color-main);
+    border: none;
+    color: var(--color-forth);
+}
+
+button.round {
+    border-radius: 1.5em;
+}
+
+/* ==================================================================================================== */
+/* INPUT
+/* ==================================================================================================== */
+input {
+    background: none;
+    color: var(--color-main);
+    border: solid 2px currentColor;
+    border-radius: 0.5em;
+    outline: none;
+    padding: 0.25em 0.75em;
+    line-height: inherit;
+    width: 300px;
+}
+
+input.round {
+    border-radius: 1.5em;
+}
+
+.search {
+    display: inline-block;
+    color: var(--color-main);
+    border: solid 2px currentColor;
+    border-radius: 0.5em;
+    padding: 0.25em 0.5em;
+    text-wrap: nowrap;
+}
+
+.search>input {
+    border: none;
+    padding: 0;
+}
+
+.search::before {
+    content: "\f002";
+    font-family: "FontAwesome";
+    line-height: inherit;
+}
+
+.search:has(>input:focus) {
+    border-color: var(--color-second);
+}
+
+/* ==================================================================================================== */
+/* TRANSITION
+/* ==================================================================================================== */
+.ease.color {
+    transition: color 0.2s ease-in-out;
+}

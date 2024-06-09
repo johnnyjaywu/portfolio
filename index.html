@@ -16,50 +16,73 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="">About</a></li>
-                <li><a href="">Experience</a></li>
-                <li><a href="">Projects</a></li>
-            </ul>
-        </nav>
-        <div>
-            <h1>Johnny J Wu</h1>
-            <h2>Full Stack Software Engineer</h2>
-            <p>Empower today with tomorrow's technologies</p>
+    <nav class="header-nav">
+        <a href="#" class="navigator"><i class="fa-solid fa-chevron-up"></i></a>
+        <ul class="flex center">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+        <div class="blur-behind"></div>
+    </nav>
+    <header class="flex vertical center">
+        <h1>Johnny J Wu</h1>
+        <h2>Full-Stack Software Developer</h2>
+
+        <ul class="flex center">
+            <li><a href="https://github.com/johnnyjaywu" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/johnnyjaywu/" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://x.com/JohnnyJayWu" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+
+        <div class="wrapper">
+            <a href="mailto:johnnyjaywu@gmail.com?subject=Hi Johnny, I'd like to hire you" class="hire-me">hire me</a>
         </div>
-        <div>
-            <ul>
-                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
-            </ul>
-        </div>
+        <span class="scroll-line"></span>
+
     </header>
     <main>
-        <section id="about">
-            <p>Previously a software developer at <a href="https://www.thefamousgroup.com/" target="_blank"
-                    rel="noopener noreferrer">The Famous Group</a> (a digital fan
-                experience company), I have now expanded my expertise to the web. Believing that the web as the most
-                powerful medium that connects people, I am committed to crafting the best user experiences on this
-                digital platform.</p>
-            <p>I love problem solving&mdash;whether it's debugging code, solving puzzles or just changing the light
-                bulb, I am always up for a challenge. When i'm not immersed in the digital world, I am hanging out with
-                my family and enjoying a cup of coffee.</p>
-            <p>I am dedicated to delivering completed projects that exceeds your expectations. Let's chat and work
-                together to find the best solution for your digital needs.</p>
+        <section class="flex vertical center" id="about">
+            <h2>about</h2>
+            <p>
+                I'm a developer, problem solver and a learner who has been immersed in technologies from a young age. My
+                expertise started with video games, then <a href="https://www.thefamousgroup.com/" target="_blank"
+                    rel="noopener noreferrer" class="link-text">creative digital experiences</a> and now for the web.
+            </p>
+            <p>
+                These days, I am building web applications to empower and enrich the mundaneness of everyday life. In
+                order to create the best experience, I always strive to achieve a balance of form and function.
+            </p>
+            <p>
+                When i'm not immersed in the digital world, I am hanging out with
+                my wife and dog, enjoying some nice coffee, or dreaming about houses.
+            </p>
+            <span class="scroll-line"></span>
         </section>
-        <section id="experience">
+        <section class="flex vertical" id="experience">
+            <h2>experience</h2>
             <a href="">See Resume</i></a>
+            <span class="scroll-line"></span>
         </section>
-        <section id="projects">
-
+        <section class="flex vertical" id="projects">
+            <h2>projects</h2>
+            <span class="scroll-line"></span>
         </section>
     </main>
+    <footer class="flex center">
+        <div class="copyright">&copy; Johnny Jay Wu</div>
+    </footer>
 </body>
 
 </html>

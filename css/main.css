@@ -1,0 +1,145 @@
+/* ==================================================================================================== */
+/* ROOT/BODY
+/* ==================================================================================================== */
+:root {
+    --color-main: #222831;
+    --color-second: #454c57;
+    --color-third: #00ADB5;
+    --color-forth: #EEEEEE;
+}
+
+body {
+    background-color: var(--color-forth);
+    color: var(--color-main);
+    font-family: "Montserrat";
+    padding: 0 1.5em;
+}
+
+/* ==================================================================================================== */
+/* BASE STYLES
+/* ==================================================================================================== */
+p {
+    margin-top: 1em;
+}
+
+h1 {
+    margin-top: 1em;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-top: 1em;
+}
+
+li {
+    padding: 0 0.5em;
+}
+
+/* ==================================================================================================== */
+/* LINKS
+/* ==================================================================================================== */
+a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+a.link-text:hover {
+    color: var(--color-third);
+}
+
+a:active {
+    opacity: 0.8;
+}
+
+a.hire-me {
+    border: 2px solid currentColor;
+    border-radius: 0.5em;
+    display: inline-block;
+    padding: 4px 1em;
+    margin-top: 1em;
+    text-transform: uppercase;
+}
+
+a.navigator {
+    position: absolute;
+}
+
+/* ==================================================================================================== */
+/* DECORATORS
+/* ==================================================================================================== */
+
+.scroll-line {
+    background: linear-gradient(var(--color-main) 20%, rgba(255, 255, 255, 0));
+    width: 2px;
+}
+
+/* ==================================================================================================== */
+/* HEADER NAV
+/* ==================================================================================================== */
+nav.header-nav {
+    background: linear-gradient(var(--color-forth) 60%, rgba(255, 255, 255, 0));
+    color: var(--color-second);
+    position: sticky;
+    top: 0;
+    line-height: 2em;
+    z-index: 999;
+}
+
+/* ==================================================================================================== */
+/* HEADER
+/* ==================================================================================================== */
+header {
+    text-align: center;
+    height: 100vh;
+}
+
+header li {
+    font-size: 1.5em;
+}
+
+header .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    flex-grow: 1;
+}
+
+header .scroll-line {
+    flex-grow: 3;
+}
+
+/* ==================================================================================================== */
+/* FOOTER
+/* ==================================================================================================== */
+footer {
+    font-size: 1em;
+}
+
+/* ==================================================================================================== */
+/* SECTIONS
+/* ==================================================================================================== */
+section {
+    height: 100vh;
+    text-align: center;
+}
+
+section h2 {
+    text-transform: uppercase;
+}
+
+section p {
+    max-width: 800px;
+}
+
+section .scroll-line {
+    align-self: center;
+    flex-grow: 1;
+}
