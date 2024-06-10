@@ -2,14 +2,15 @@
 /* ROOT/BODY
 /* ==================================================================================================== */
 :root {
-    --color-main: #222831;
-    --color-second: #454c57;
-    --color-third: #00ADB5;
-    --color-forth: #EEEEEE;
+    --color-main: rgb(34, 40, 49);
+    --color-second: rgb(74, 80, 90);
+    --color-accent: rgb(0, 173, 181);
+    --color-bg: rgb(238, 238, 238);
+    --color-bg-transparent: rgb(238, 238, 238, 0.5);
 }
 
 body {
-    background-color: var(--color-forth);
+    background-color: var(--color-bg);
     color: var(--color-main);
     font-family: "Montserrat";
     padding: 0 1.5em;
@@ -38,13 +39,17 @@ li {
     padding: 0 0.5em;
 }
 
+p {
+    text-align: left;
+}
+
 /* ==================================================================================================== */
 /* LINKS
 /* ==================================================================================================== */
 a {
     color: inherit;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 a:hover {
@@ -52,11 +57,11 @@ a:hover {
 }
 
 a.link-text:hover {
-    color: var(--color-third);
+    color: var(--color-accent);
 }
 
 a:active {
-    opacity: 0.8;
+    opacity: 1;
 }
 
 a.hire-me {
@@ -68,24 +73,20 @@ a.hire-me {
     text-transform: uppercase;
 }
 
-a.navigator {
-    position: absolute;
-}
-
 /* ==================================================================================================== */
-/* DECORATORS
+/* SCROLL LINE
 /* ==================================================================================================== */
 
 .scroll-line {
-    background: linear-gradient(var(--color-main) 20%, rgba(255, 255, 255, 0));
+    background: linear-gradient(var(--color-main) 60%, rgba(0, 0, 0, 0));
     width: 2px;
 }
 
 /* ==================================================================================================== */
-/* HEADER NAV
+/* NAV
 /* ==================================================================================================== */
-nav.header-nav {
-    background: linear-gradient(var(--color-forth) 60%, rgba(255, 255, 255, 0));
+nav.main-nav {
+    background: linear-gradient(var(--color-bg) 60%, rgba(255, 255, 255, 0));
     color: var(--color-second);
     position: sticky;
     top: 0;
@@ -94,25 +95,25 @@ nav.header-nav {
 }
 
 /* ==================================================================================================== */
-/* HEADER
+/* LANDING
 /* ==================================================================================================== */
-header {
+header.landing {
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-header li {
+header.landing li {
     font-size: 1.5em;
 }
 
-header .wrapper {
+header.landing .wrapper:has(.hire-me) {
     display: flex;
     flex-direction: column;
     justify-content: end;
     flex-grow: 1;
 }
 
-header .scroll-line {
+header.landing .scroll-line {
     flex-grow: 3;
 }
 
@@ -127,7 +128,7 @@ footer {
 /* SECTIONS
 /* ==================================================================================================== */
 section {
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
 
@@ -135,11 +136,63 @@ section h2 {
     text-transform: uppercase;
 }
 
-section p {
-    max-width: 800px;
+section * {
+    max-width: 600px;
 }
 
 section .scroll-line {
     align-self: center;
     flex-grow: 1;
+}
+
+/* ==================================================================================================== */
+/* EXPERIENCE
+/* ==================================================================================================== */
+.experience {
+    margin-top: 1.5em;
+}
+
+.experience>header {
+    align-self: stretch;
+}
+
+.experience>header:hover {
+    opacity: .7;
+}
+
+.experience>header:active {
+    opacity: 1;
+}
+
+.experience>header>* {
+    pointer-events: none;
+}
+
+.experience>header>h3 {
+    line-height: 1;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.experience>header>span {
+    color: var(--color-second);
+}
+
+.experience>.content {
+    background-color: var(--color-bg-transparent);
+    border-radius: 0.5em;
+    border: none;
+    filter: contrast(0.8);
+    padding: 1em;
+    margin-top: 1em;
+    text-align: left;
+}
+
+.experience>.content>* {
+    margin: 0;
+    max-width: 600px;
+}
+
+.skill {
+    margin: 0.5em 0.5em 0 0;
 }

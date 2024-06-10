@@ -5,15 +5,18 @@
     cursor: not-allowed;
 }
 
-/* ==================================================================================================== */
-/* TEXT
-/* ==================================================================================================== */
-.uppercase {
-    text-transform: uppercase;
+.hidden {
+    display: none;
 }
 
-.small {
-    font-size: 0.7em;
+.clickable {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.not-clickable {
+    cursor: default;
+    pointer-events: none;
 }
 
 /* ==================================================================================================== */
@@ -21,6 +24,10 @@
 /* ==================================================================================================== */
 .flex {
     display: flex;
+}
+
+.flex.vertical {
+    flex-direction: column;
 }
 
 .flex.center {
@@ -36,8 +43,49 @@
     justify-content: space-evenly;
 }
 
-.flex.vertical {
-    flex-direction: column;
+.flex.sa {
+    justify-content: space-around;
+}
+
+.flex.wrap {
+    flex-wrap: wrap;
+}
+
+/* ==================================================================================================== */
+/* DECORATORS
+/* ==================================================================================================== */
+.uppercase {
+    text-transform: uppercase;
+}
+
+.small {
+    font-size: 0.7em;
+    line-height: 0.7;
+}
+
+.border-regular {
+    background-color: var(--color-bg);
+    border: solid 2px currentColor;
+    border-radius: 0.5em;
+    color: var(--color-main);
+}
+
+.border-round {
+    background-color: var(--color-bg);
+    border: solid 2px currentColor;
+    border-radius: 1.5em;
+    color: var(--color-main);
+}
+
+.solid {
+    background-color: var(--color-main);
+    border: none;
+    color: var(--color-bg);
+}
+
+.bold {
+    font-weight: bold;
+    border-width: 4px;
 }
 
 /* ==================================================================================================== */
@@ -57,29 +105,6 @@ button:active {
     filter: contrast(0.8);
 }
 
-button.regular {
-    background: var(--color-forth);
-    border: solid 2px currentColor;
-    color: var(--color-main);
-}
-
-button.bold {
-    background: var(--color-forth);
-    border: solid 4px currentColor;
-    color: var(--color-main);
-    font-weight: bold;
-}
-
-button.solid {
-    background: var(--color-main);
-    border: none;
-    color: var(--color-forth);
-}
-
-button.round {
-    border-radius: 1.5em;
-}
-
 /* ==================================================================================================== */
 /* INPUT
 /* ==================================================================================================== */
@@ -92,10 +117,6 @@ input {
     padding: 0.25em 0.75em;
     line-height: inherit;
     width: 300px;
-}
-
-input.round {
-    border-radius: 1.5em;
 }
 
 .search {
@@ -119,7 +140,7 @@ input.round {
 }
 
 .search:has(>input:focus) {
-    border-color: var(--color-second);
+    border-color: var(--color-accent);
 }
 
 /* ==================================================================================================== */
