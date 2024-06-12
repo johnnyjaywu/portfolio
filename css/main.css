@@ -24,7 +24,6 @@ p {
 }
 
 h1 {
-    margin-top: 1em;
     font-size: 2.5em;
     font-weight: 600;
 }
@@ -32,7 +31,6 @@ h1 {
 h2 {
     font-size: 1.25em;
     font-weight: 600;
-    margin-top: 1em;
 }
 
 li {
@@ -90,7 +88,7 @@ nav.main-nav {
     color: var(--color-second);
     position: sticky;
     top: 0;
-    line-height: 2em;
+    line-height: 4em;
     z-index: 999;
 }
 
@@ -98,8 +96,11 @@ nav.main-nav {
 /* LANDING
 /* ==================================================================================================== */
 header.landing {
-    text-align: center;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header.landing li {
@@ -109,21 +110,29 @@ header.landing li {
 header.landing .wrapper:has(.hire-me) {
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    flex-grow: 1;
+    /* justify-content: end; */
+    /* flex-grow: 1; */
 }
 
 header.landing .scroll-line {
-    flex-grow: 3;
+    flex-basis: 0;
 }
 
 /* ==================================================================================================== */
 /* FOOTER
 /* ==================================================================================================== */
 footer {
-    font-size: 1em;
+    margin-top: 10em;
 }
 
+footer ul {
+    font-size: 1.5em;
+}
+
+.copyright {
+    padding: 1em 0;
+    font-size: 0.75em;
+}
 /* ==================================================================================================== */
 /* SECTIONS
 /* ==================================================================================================== */
@@ -141,6 +150,7 @@ section * {
 }
 
 section .scroll-line {
+    background: linear-gradient(rgba(0, 0, 0, 0), var(--color-main), rgba(0, 0, 0, 0));
     align-self: center;
     flex-grow: 1;
 }
@@ -150,10 +160,6 @@ section .scroll-line {
 /* ==================================================================================================== */
 .experience {
     margin-top: 1.5em;
-}
-
-.experience>header {
-    align-self: stretch;
 }
 
 .experience>header:hover {
@@ -183,8 +189,8 @@ section .scroll-line {
     border-radius: 0.5em;
     border: none;
     filter: contrast(0.8);
-    padding: 1em;
     margin-top: 1em;
+    padding: 1em;
     text-align: left;
 }
 
@@ -195,4 +201,31 @@ section .scroll-line {
 
 .skill {
     margin: 0.5em 0.5em 0 0;
+}
+
+
+/* ==================================================================================================== */
+/* PROJECTS
+/* ==================================================================================================== */
+.project {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5em;
+}
+
+.project>header>h3 {
+    line-height: 1;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.project>a.wrapper {
+    cursor: pointer;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+
+.project>a.wrapper>img {
+    width: 100%;
 }
