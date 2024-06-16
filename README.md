@@ -7,7 +7,7 @@ My simple portfolio built in raw HTML, CSS, JavaScript
 
 **Tech stack:** HTML, CSS, JavaScript
 
-This project is designed with the intention of quick and accessible content delivery. Each content is intentionally designed to occupy a majority of the viewport, minimizing information for the user. Navigation is kept simple and persistent to minimize clicks.
+This project is designed with the intention of quick and accessible content delivery. Each content is intentionally designed to occupy a majority of the viewport, avoiding an overload of information for the user. Navigation is kept simple and persistent to minimize clicks.
 
 ## Optimizations
 
